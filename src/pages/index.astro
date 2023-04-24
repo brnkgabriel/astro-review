@@ -1,13 +1,11 @@
 --- 
+import MainLayout from "../layouts/MainLayout.astro";
 
+const pageTitle = "Landing Page"
 --- 
-<a href="/">Home</a>
-<a href="/about">About</a>
-<a href="/hobbies">Hobbies</a>
-<h1>
-	My Astro front
-</h1>
-
+<MainLayout title={pageTitle}>
+	<p>This is the landing page</p>
+</MainLayout>
 <style>
 	
 </style>

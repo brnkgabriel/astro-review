@@ -1,14 +1,21 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
 
+const pageTitle = "Hobbies"
+const hobbies = [
+  "Chess",
+  "Table Tennis",
+  "Reading the Bible",
+  "Listening to Audio Books",
+  "Learning Tech"
+]
 ---
-<a href="/">Home</a>
-<a href="/about">About</a>
-<a href="/hobbies">Hobbies</a>
-<h1>My Hobbies</h1>
-<ul>
-  <li>Chess</li>
-  <li>Table Tennis</li>
-  <li>Learning the latest Tech Framework</li>
-</ul>
+<MainLayout title={pageTitle}>
+  <ul class="w-48 text-sm font-medium rounded-lg border bg-gray-700 border-gray-600 text-white">
+    {
+      hobbies.map(hobby => (<li class="py-2 px-4 w-full rounded-l-lg border-b border-gray-600">{ hobby }</li>))
+    }
+  </ul>
+</MainLayout>
  
 <style></style>
